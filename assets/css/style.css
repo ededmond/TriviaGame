@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+#Score, #Answers, #answer {
+    text-align: left;
+}
+#Score-p {
+    text-align: right;
+}
