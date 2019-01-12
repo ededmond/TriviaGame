@@ -1,5 +1,15 @@
+html {
+    margin: 0;
+    padding: 0;
+}
 body {
     text-align: center;
+    margin:5vw;
+}
+
+#Answers {
+    margin:5vw;
+    height:180px;
 }
 #Score, #Answers, #answer {
     text-align: left;
