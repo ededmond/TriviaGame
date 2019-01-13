@@ -58,6 +58,7 @@ $(document).ready(function() {
     function restart() {
         wins =0;
         losses =0;
+        $("#Question").addClass("normal-font");
         questions.sort(function() { //put questions in a random order
             return 0.5 - Math.random();
         });
@@ -98,11 +99,12 @@ $(document).ready(function() {
             $("#Question").html("<h1>" + questions[index].question +"</h1>");
             $("#Qnum").text("Question #" + (index+1) + ":");
             $("#Answers").text("");
-            var addAns = Math.floor(Math.random()*4);
+            var addAns = Math.floor(Math.random()*3);
             for (var i =0; i <answers.length; i++) {
                 var newA = $("<h2>" + letters[letterI] + answers[i] + "</h2>");
                 newA.addClass("answer");
                 $("#Answers").append(newA);
+                console.log(addAns + " = " + i +" letter: " + letterI);
                 if (i === addAns) {    //add correct answer
                     console.log("Make ")
                     letterI++;
@@ -111,7 +113,6 @@ $(document).ready(function() {
                     newA.addClass("answer");
                     $("#Answers").append(newA);
                 }
-                
                 letterI++;
             }
             timeIncrement = setInterval(timeQuestion,1000);
@@ -120,7 +121,6 @@ $(document).ready(function() {
         
     }
     $(document).on("click",".answer",function() {
-        console.log("got HERE");
         var text = $(this).text();
         console.log(text);
         console.log(ans);

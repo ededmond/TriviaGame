@@ -5,15 +5,57 @@ html {
 body {
     text-align: center;
     margin:5vw;
+    background-image: url("../images/stardust/stardust.png");
+    color : gold;
+    font-family: 'Gothic A1', sans-serif;
+    /* font-family: 'Poiret One', serif; */
 }
-
+.container {
+    background-color : black;
+    border-radius : 10px;
+}
+h2 {
+    padding:5px;
+}
+#Question {
+    font-family: 'Poiret One', serif;
+    font-size: 80px;
+}
+.normal-font {
+    font-family: 'Gothic A1', sans-serif !important;
+    font-size : 40;
+    
+}
+#Qnum, #Timer {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
 #Answers {
     margin:5vw;
-    height:180px;
+    min-height:180px;
 }
-#Score, #Answers, #answer {
+#Score, #Answers, .answer {
     text-align: left;
+}
+#restart {
+    font-family: 'Poiret One', serif;
+    margin-top : 80px;
+    border : solid 2px gold;
+    background-color : black;
+    color : gold;
+    border-radius : 5px;
 }
 #Score-p {
     text-align: right;
+}
+.bottom-pc {
+    position:fixed;
+    bottom:0;
+    left: 0;
+    height:200px;
+    z-index : -1;
+}
+.answer:hover, #restart:hover {
+    cursor : pointer;
+    background-color : gold;
+    color :black;
 }
